@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+        <style>
+
+            body {
+                margin: 0;
+                background: #d9d9d9;
+                font-family: Arial,Helvetica,sans-serif;
+            }
+
+            header {
+                background: #151213;
+                color: #fff;
+                padding: 50px;
+                text-align: center;
+            }
+
+            header h1 {
+                margin: 0;
+                letter-spacing: 3px
+            }
+
+            header p {
+                color: #aaa
+            }
+
+            .container {
+                display: flex;
+                width: 100%;
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                background: #111;
+            }
+
+            nav ul li {
+                position: relative
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 15px 18px;
+                color: #fff;
+                text-decoration: none;
+                font-size: 13px;
+            }
+
+            nav ul li:hover {
+                background: #333
+            }
+
+            nav ul li ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                background: #222;
+                min-width: 160px;
+                z-index: 10;
+            }
+
+            nav ul li:hover ul {
+                display: block
+            }
+
+            nav ul li ul li a {
+                padding: 12px
+            }
+
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                color: #aaa;
+                text-align: center;
+                padding: 20px;
+                font-size: 13px;
+            }
+            .content {
+                width: 55%;
+                display: flex;
+                align-items: center;
+                padding: 50px;
+            }
+
+            .content-inner {
+                max-width: 520px;
+                animation: fadeIn 1.2s ease;
+            }
+
+            h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 18px;
+                margin-bottom: 35px;
+                color: #444;
+            }
+
+            .buttons {
+                display: flex;
+                gap: 20px;
+            }
+
+            .btn-link {
+                display: inline-block;
+                padding: 14px 32px;
+                border: 1.5px solid #000;
+                background: transparent;
+                color: #000;
+                font-size: 14px;
+                text-decoration: none;
+                letter-spacing: 1px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+                .btn-link:hover {
+                    background: #000;
+                    color: #fff;
+                    transform: translateY(-2px);
+                }
+
+                .btn-link.primary {
+                    background: #000;
+                    color: #fff;
+                }
+
+                    .btn-link.primary:hover {
+                        background: transparent;
+                        color: #000;
+                    }
+
+            .slider {
+                width: 45%;
+                height: 100%;
+                position: relative;
+                background: #000;
+                overflow: hidden;
+            }
+
+            .mySlides {
+                display: none;
+                width: 100%;
+                height: 100%;
+            }
+
+                .mySlides img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            .dots-container {
+                position: absolute;
+                bottom: 20px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .dot {
+                height: 10px;
+                width: 10px;
+                margin: 0 5px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.3s ease;
+            }
+
+            .active {
+                background-color: #fff;
+            }
+
+            .social-links {
+                margin-top: 20px;
+                display: flex;
+                gap: 15px;
+            }
+
+                .social-links img {
+                    width: 50px;
+                    opacity: 0.7;
+                    transition: all 0.3s ease;
+                }
+
+                    .social-links img:hover {
+                        opacity: 1;
+                        transform: scale(1.1);
+                    }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 900px) {
+                .container {
+                    flex-direction: column;
+                }
+
+                .content,
+                .slider {
+                    width: 100%;
+                    height: 50vh;
+                }
+
+                .content {
+                    padding: 40px 20px;
+                    text-align: center;
+                    justify-content: center;
+                }
+
+                .buttons {
+                    justify-content: center;
+                }
+
+                h1 {
+                    font-size: 42px;
+                }
+            }
+        </style>
+
+        <body>
+
+            <a href="index.html"><img src="logo.jpg" alt="Nina Furugiya" align="left" style="height:150px"></a>
+            <header>
+                <h1>HOME</h1>
+                Nina Furugiya
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li>
+                        <a href="#">INFO ▾</a>
+                        <ul>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="story.html">Our Story</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="collections.html">COLLECTIONS</a></li>
+                    <li>
+                        <a href="#">COMMUNITY ▾</a>
+                       <ul>
+                           <li><a href="community.html">Community and Events</a></li>
+                           <li><a href="thriftguide.html">Thrift Guide</a></li>
+                           <li><a href="sustainablefashion.html">Sustainable Fashion</a></li>
+                       </ul>
+                   </li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="feedback.html">FEEDBACK</a></li>
+                </ul>
+            </nav>
+
+            <div class="container">
+
+                <div class="content">
+                    <div class="content-inner">
+                        <h1>NINA FURUGIYA</h1>
+                        <p>At <b><i>Nina Furugiya</i></b>, we curate timeless pieces with character, quality, and attitude. Every item has a story, carefully selected to help you stand out without following fast-fashion trends. Dress smarter, shop consciously, and discover fashion that feels uniquely yours.</p>
+
+                        <div class="buttons">
+                            <a href="collections.html" class="btn-link primary">SHOP NOW</a>
+                            <a href="aboutus.html" class="btn-link">LEARN MORE</a>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/nina_furugiya?igsh=MTg0NWF3bnR1NmJjZw==" target="_blank">
+                                <img src="ig.png" alt="Instagram">
+                            </a>
+                            <a href="https://www.facebook.com/share/17gXDZBean/" target="_blank">
+                                <img src="fb.png" alt="Facebook">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider">
+
+                    <div class="mySlides">
+                        <img src="amjat1.jpeg">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="nana3.jpeg">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="amjat3.jpeg">
+                    </div>
+
+                    <div class="dots-container">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <script>
+                let slideIndex = 0;
+                let dots = document.getElementsByClassName("dot");
+                showSlides();
+
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 2000);
+                }
+            </script>
+
+            <div class="footer">
+                © 2026 Nina Furugiya
+            </div>
+        </body>
+</html>

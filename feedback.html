@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #d9d9d9;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background: #151213;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+                letter-spacing: 3px;
+            }
+
+            header p {
+                color: #aaa;
+            }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: #111;
+        }
+
+            nav ul li {
+                position: relative;
+            }
+
+                nav ul li a {
+                    display: block;
+                    padding: 15px 18px;
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 13px;
+                }
+
+                nav ul li:hover {
+                    background: #333;
+                }
+
+                nav ul li ul {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    background: #222;
+                    min-width: 160px;
+                    z-index: 10;
+                }
+
+                nav ul li:hover ul {
+                    display: block;
+                }
+
+                nav ul li ul li a {
+                    padding: 12px;
+                }
+
+        .feedback-wrapper {
+            min-height: calc(100vh - 280px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .feedback-container {
+            background: #151213;
+            padding: 35px;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+            .feedback-container h2 {
+                text-align: center;
+                margin-bottom: 25px;
+                color: #ffffff;
+                letter-spacing: 1px;
+            }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #cccccc;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #222;
+            color: #ffffff;
+        }
+
+            input::placeholder,
+            textarea::placeholder {
+                color: #888;
+            }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #ffffff;
+            color: #111;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+            button:hover {
+                background: #333;
+                color: #ffffff;
+            }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html">
+        <img src="logo.jpg" alt="Nina Furugiya" style="height:150px; float:left;">
+    </a>
+
+    <header>
+        <h1>FEEDBACK</h1>
+        <p>How do you like it?</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li>
+                <a href="#">INFO ▾</a>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                </ul>
+            </li>
+            <li><a href="collections.html">COLLECTIONS</a></li>
+            <li>
+                <a href="#">COMMUNITY ▾</a>
+               <ul>
+                   <li><a href="community.html">Community and Events</a></li>
+                   <li><a href="thriftguide.html">Thrift Guide</a></li>
+                   <li><a href="sustainablefashion.html">Sustainable Fashion</a></li>
+               </ul>
+           </li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
+        </ul>
+    </nav>
+
+    <div class="feedback-wrapper">
+        <div class="feedback-container">
+            <h2>Give Your Feedback</h2>
+
+            <form action="mailto:naurahq.radzi@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Rate our Products!</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Choose Your Rating</option>
+                        <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                        <option value="4">⭐⭐⭐⭐ - Good</option>
+                        <option value="3">⭐⭐⭐ - Average</option>
+                        <option value="2">⭐⭐ - Poor</option>
+                        <option value="1">⭐ - Very Bad</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Feedback:</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 Nina Furugiya
+    </div>
+
+</body>
+</html>
